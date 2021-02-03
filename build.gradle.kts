@@ -30,4 +30,5 @@ tasks.withType<com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar> {
         include(dependency("org.jetbrains.kotlin:kotlin-script-util:1.4.21"))
         include(dependency("org.jetbrains.kotlin:kotlin-compiler:1.4.21"))
     }
+    classifier = null
 }
