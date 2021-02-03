@@ -6,6 +6,8 @@ plugins {
 group = "me.scoretwo"
 version = "1.0-SNAPSHOT"
 
+defaultTasks = mutableListOf("publishToMavenLocal")
+
 repositories {
     jcenter()
     mavenCentral()
