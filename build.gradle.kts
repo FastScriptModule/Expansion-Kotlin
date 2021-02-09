@@ -5,6 +5,7 @@ plugins {
 
 group = "me.scoretwo"
 version = "1.0-SNAPSHOT"
+description = "An expansion that supports KotlinScript."
 
 defaultTasks = mutableListOf("shadowJar")
 
@@ -33,4 +34,15 @@ tasks.withType<com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar> {
         include(dependency("org.jetbrains.kotlin:kotlin-compiler:1.4.21"))
     }
     classifier = null
+}
+
+tasks.processResources {
+    from("src/main/resources") {
+        include("expansion.yml")
+        expand(mapOf(
+            "name" to rootProject.name,
+            "version" to rootProject.version,
+            "description" to rootProject.description
+        ))
+    }
 }
