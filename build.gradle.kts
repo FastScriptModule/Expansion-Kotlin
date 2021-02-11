@@ -26,13 +26,15 @@ dependencies {
 
 tasks.withType<com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar> {
     dependencies {
-        exclude(dependency("org.jetbrains.kotlin:kotlin-stdlib"))
-        exclude(dependency("org.jetbrains.kotlin:kotlin-stdlib-common"))
+        include(dependency("org.jetbrains.kotlin:kotlin-stdlib"))
+        include(dependency("org.jetbrains.kotlin:kotlin-stdlib-common"))
 
         include(dependency("commons-cli:commons-cli:1.4"))
         include(dependency("org.jetbrains.kotlin:kotlin-script-util:1.4.21"))
         include(dependency("org.jetbrains.kotlin:kotlin-compiler:1.4.21"))
     }
+    relocate("kotlin", "me.scoretwo.utils.shaded.kotlin")
+    relocate("org.apache","me.scoretwo.utils.shaded.org.apache")
     classifier = null
 }
 
