@@ -1,4 +1,4 @@
-# Expansion-KotlinScript
->该项目暂时不作更新(也无法使用)
+# Expansion-Kotlin
+> (?)可能无法使用, 请自行测试.
 
-用于兼容KotlinScript脚本
+用于兼容Kotlin脚本

@@ -1,2 +1,2 @@
-rootProject.name = "Expansion-KotlinScript"
+rootProject.name = "Expansion-Kotlin"
 
